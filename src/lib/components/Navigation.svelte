@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
 
     let showMenu: boolean = false;
@@ -6,19 +7,27 @@
         showMenu = !showMenu;
         document.querySelector("button")?.classList.toggle("inactive");
     }
+
+    let animate = false;
+
+    onMount(() => {
+        animate = true;
+    })
 </script>
 
 <nav>
-    <button on:click={toggleMenu} class="inactive">
-        <span></span>
-        <span></span>
-    </button>
-    <a href="/"><img src="/images/logo.png" alt="Logo"></a>
-    <a href="/"><img src="/images/locationIcon.svg" alt="Location Icon"></a>
+    {#if animate}
+        <button on:click={toggleMenu} class="inactive" transition:fly={{ x: -100, duration: 1000 }}>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="/"><img src="/images/logo.png" alt="Logo" transition:fly={{ y: -100, duration: 1000 }}></a>
+        <a href="/"><img src="/images/locationIcon.svg" alt="Location Icon" transition:fly={{ x: 100, duration: 1000 }}></a>
+    {/if}
 </nav>
 
 {#if showMenu}
-    <div in:fly={{ y: 200, duration: 400 }} out:fly={{ y: 200, duration: 400 }}>
+    <div transition:fly={{ y: 200, duration: 400 }}>
         <a href="/">Programs</a>
         <a href="/">About</a>
         <a href="/">Contact</a>
@@ -36,8 +45,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 1em;
         width: 100%;
+        height: 4em;
 
         button {
             background-color: transparent;
@@ -106,15 +115,15 @@
     div {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 3em;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 6em;
+        top: 4em;
         padding: 4em;
-        height: fit-content;
-        box-shadow: 0 0 1em 0.1em #00274411;
-        border-radius: 0.5em;
-        width: 80%;
+        height: calc(100dvh - 4em);
+        width: 100%;
+        background-color: white;
+        z-index: 2;
     }
 </style>

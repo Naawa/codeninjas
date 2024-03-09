@@ -4,3 +4,4 @@ import "$lib/scss/styles.scss"
 </script>
 
 <Navigation></Navigation>
+<slot />
