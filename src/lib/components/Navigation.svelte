@@ -52,6 +52,7 @@
             background-color: transparent;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 0.15em;
             flex-direction: column;
             min-width: 2em;
