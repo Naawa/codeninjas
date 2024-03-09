@@ -46,7 +46,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5em;
-            translate: 0 4em;
+            translate: 0 8em;
 
             h1, p {
                 color: white;
