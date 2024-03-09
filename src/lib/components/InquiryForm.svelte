@@ -89,11 +89,11 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
         width: 100%;
 
         p {
-            color: #0067be70;
+            color: #00345fb9;
             letter-spacing: 0.1em;
         }
 

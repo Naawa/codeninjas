@@ -17,7 +17,7 @@
         <h2 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h2>
         <p transition:fly={{ y: 50, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
     </div>
-    <button transition:fly={{ y: 50, duration: 1000}}>Learn More</button>
+    <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'end', behavior: 'smooth' })}}} transition:fly={{ y: 50, duration: 1000}}>Learn More</button>
     {/if}
 </section>
 
