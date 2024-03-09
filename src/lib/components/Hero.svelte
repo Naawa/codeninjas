@@ -33,11 +33,12 @@
         position: relative;
         flex-direction: column;
         gap: 2em;
+        overflow: hidden;
         
         video {
-            height: 100%;
             opacity: 0.3;
             position: absolute;
+            width: 100%;
         }
 
         div, button {
