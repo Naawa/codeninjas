@@ -14,10 +14,10 @@
         <track kind="captions">
     </video>
     <div>
-        <h2 transition:fly={{ y: 400, duration: 600}}>Kids Learn Code</h2>
-        <p transition:fly={{ y: 400, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
+        <h2 transition:fly={{ y: 100, duration: 600}}>Kids Learn Code</h2>
+        <p transition:fly={{ y: 100, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
     </div>
-    <button transition:fly={{ y: 400, duration: 1000}}>Learn More</button>
+    <button transition:fly={{ y: 100, duration: 1000}}>Learn More</button>
     {/if}
 </section>
 
