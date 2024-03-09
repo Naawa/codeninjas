@@ -89,20 +89,19 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 1em;
+        gap: 2em;
         width: 100%;
+        height: 100vh;
 
         p {
-            color: #00345fb9;
+            color: #2c638fb6;
             letter-spacing: 0.1em;
         }
 
         div {
             h3 {
                 &:last-of-type {
-                    background: -webkit-linear-gradient(#00b7ff, #37c6ff);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    color: #187abf;
                 }
             }
         }
@@ -121,7 +120,8 @@
             text-align: center;
             flex-direction: column;
             gap: 1em;
-            width: fit-content;
+            min-width: fit-content;
+            width: 35vw;
             max-width: 90dvw;
             background-color: white;
             box-shadow: 0 8px 24px #0067be40;

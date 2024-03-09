@@ -23,7 +23,6 @@
         background-repeat: no-repeat;
         border: solid 1px;
         position: relative;
-        margin: 4em;
         max-height: 85dvh;
 
         div {
