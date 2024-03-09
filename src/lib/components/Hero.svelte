@@ -43,8 +43,7 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
-            gap: 1em;
-            translate: 0 2em;
+            gap: 0.5em;
 
             h2, p {
                 color: white;
