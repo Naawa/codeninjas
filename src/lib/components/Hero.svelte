@@ -15,7 +15,7 @@
         <track kind="captions">
     </video>
     <div>
-        <h2 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h2>
+        <h1 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h1>
         <p transition:fly={{ y: 50, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
     </div>
     <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'end', behavior: 'smooth' })}}} transition:fly={{ y: 50, duration: 1000}}>Learn More</button>
@@ -32,13 +32,13 @@
         background-color: black;
         position: relative;
         flex-direction: column;
-        gap: 2em;
+        gap: 4em;
         overflow: hidden;
         
         video {
             opacity: 0.3;
             position: absolute;
-            width: 100%;
+            min-height: 70vh;
         }
 
         div, button {
@@ -46,8 +46,9 @@
             display: flex;
             flex-direction: column;
             gap: 0.5em;
+            translate: 0 4em;
 
-            h2, p {
+            h1, p {
                 color: white;
                 text-align: center;
             }
