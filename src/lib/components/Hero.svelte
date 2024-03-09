@@ -11,7 +11,7 @@
 </script>
 <section>
     {#if animate}
-    <video src="https://c3mpuncadl9iaete.public.blob.vercel-storage.com/CNWC%20Final%20Shortened%20for%20Web-zwsXBjaCLgizAv38MpRqyOzuOFRgwr.mp4" autoplay loop muted>
+    <video src="https://c3mpuncadl9iaete.public.blob.vercel-storage.com/West%20Coquitlam%20Center-0bTruXZiYdeo6soxgSsGFVoj3P3V2U.mp4" autoplay loop muted>
         <track kind="captions">
     </video>
     <div>
@@ -32,7 +32,7 @@
         background-color: black;
         position: relative;
         flex-direction: column;
-        gap: 4em;
+        gap: 2em;
         overflow: hidden;
         
         video {
@@ -46,7 +46,6 @@
             display: flex;
             flex-direction: column;
             gap: 0.5em;
-            translate: 0 8em;
 
             h1, p {
                 color: white;
