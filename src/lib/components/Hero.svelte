@@ -1,4 +1,5 @@
 <script>
+	import { browser } from "$app/environment";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
 
