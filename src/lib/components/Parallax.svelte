@@ -4,7 +4,7 @@
 
 <style lang="scss">
     section {
-        background-image: url('images/gradientbg.png');
+        background-image: url('/images/gradientbg.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
