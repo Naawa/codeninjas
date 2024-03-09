@@ -1,15 +1,11 @@
-<script lang="ts">
-
-</script>
-
 <section>
-    <p>OUR MISSION</p>
+    <p class="animateOnView">OUR MISSION</p>
     <div class="subheading">
-        <h2>WE MAKE</h2>
-        <h2>CODING FUN</h2>
+        <h3 class="animateOnView">WE MAKE</h3>
+        <h3 class="animateOnView">CODING FUN</h3>
     </div>
-    <p>We believe that Code Ninjas is unlike anything your child has experienced before. Every day thousands of our Ninjas enter our Dojos to learn to code on our proprietary learning platform – and in the process UNLEASH THEIR INNER NINJA! Your child will join like-minded students and together they will tackle fun and engaging problems - and have a great time!</p>
-    <span>
+    <p class="animateOnView">We believe that Code Ninjas is unlike anything your child has experienced before. Every day thousands of our Ninjas enter our Dojos to learn to code on our proprietary learning platform – and in the process UNLEASH THEIR INNER NINJA! Your child will join like-minded students and together they will tackle fun and engaging problems - and have a great time!</p>
+    <span class="animateOnView">
         <a href="https://www.youtube.com/watch?v=cg-lusa7yFM" target="_blank">
             <div>
               <img src="https://www.codeninjas.com/hubfs/MSNBC.svg" alt="MSNBC">
@@ -45,27 +41,20 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 1em;
+        gap: 2em;
         width: 100%;
-        min-height: 70vh;
-        padding: 4em;
+        min-height: 60vh;
+        padding: 4em 0;
+
 
         p {
             text-wrap: balance;
             max-width: 80dvw;
-            margin: 3em 0;
+
             &:first-of-type {
                 color: #2c638fb6;
                 letter-spacing: 0.1em;
-                margin: 1em;
             }   
-        }
-
-        iframe {
-            aspect-ratio: 16/9;
-            height: 100%;
-            width: clamp(200px, 100%, 1200px);
-            padding: 2em;
         }
 
         div {
@@ -80,7 +69,7 @@
                 height: fit-content;
             }
 
-            h2 {
+            h3 {
                 &:last-of-type {
                     color: #187abf;
                 }
@@ -97,7 +86,6 @@
         span {
             display: flex;
             width: 90%;
-            //border: solid 1px red;
             justify-content: center;
             gap: 8dvw;
             align-items: center;
@@ -110,8 +98,18 @@
             }
         }
     }
+    .animateOnView {
+        opacity: 1;
+        view-timeline-name: --item-timeline;
+        animation: slide-fade-in both;
+        animation-timeline: --item-timeline;
+        animation-range: contain 15% contain 45%;
+    }
 
-    .lazyloaded {
-        width: clamp(200px, 60dvh, 70dvw);
+    @keyframes slide-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(5vh);
+        }
     }
 </style>

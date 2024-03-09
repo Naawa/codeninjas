@@ -32,7 +32,6 @@
 
 html { 
     height: fit-content;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 
     body {
@@ -41,7 +40,6 @@ html {
         width: clamp(250px, 100%, 100dvw);
         justify-content: center;
         align-items: center;
-        overflow-x: hidden;
         
         h1 { font-size: 3.366rem; }
         h2 { font-size: 2.525rem; }

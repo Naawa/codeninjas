@@ -4,7 +4,7 @@
 
 <section>
     {#each locations as dojo}
-        <div style="top: {dojo.mapPosition[1]}%; left: {dojo.mapPosition[0]}%">
+        <div class="animateOnView"  style="top: {dojo.mapPosition[1]}%; left: {dojo.mapPosition[0]}%">
             <span>
                 <p>{dojo.phone}</p>
                 <p>{dojo.address}</p>
@@ -79,6 +79,20 @@
                     visibility: visible;
                 }
             }
+        }
+    }
+    .animateOnView {
+        opacity: 1;
+        view-timeline-name: --item-timeline;
+        animation: slide-fade-in both;
+        animation-timeline: --item-timeline;
+        animation-range: contain 15% contain 45%;
+    }
+
+    @keyframes slide-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(5vh);
         }
     }
 </style>

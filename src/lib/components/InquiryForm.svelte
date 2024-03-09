@@ -13,10 +13,10 @@
 </script>
 
 <section id="contact">
-    <p>REQUEST INFO</p>
+    <p class="animateOnView" >REQUEST INFO</p>
     <div>
-        <h3>EMPOWER</h3>
-        <h3>THEIR FUTURE</h3>
+        <h3 class="animateOnView" >EMPOWER</h3>
+        <h3 class="animateOnView" >THEIR FUTURE</h3>
     </div>
     {#if $message}
         <h4>
@@ -31,12 +31,12 @@
                 {/each}
             </select>
             <span>
-                <input 
+                <input class="animateOnView" 
                 type="text" 
                 name="parentFirstName" placeholder="Parent First Name" bind:value={$form.parentFirstName}  {...$constraints.parentFirstName}
                 aria-invalid={$errors.parentFirstName ? 'true' : undefined}>
 
-                <input 
+                <input class="animateOnView" 
                 type="text" 
                 name="parentLastName" 
                 placeholder="Parent Last Name" 
@@ -45,26 +45,26 @@
             </span>
             {#if $errors.parentFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.parentLastName}<span class="invalid">{$errors.name}</span>{/if}
-            <input 
+            <input class="animateOnView" 
             type="text" 
             name="contactNumber" 
             placeholder="(000)-000-0000" bind:value={$form.contactNumber}  {...$constraints.contactNumber}
             aria-invalid={$errors.contactNumber ? 'true' : undefined} maxlength="10">
 
-            <input 
+            <input class="animateOnView" 
             type="email" 
             name="email" 
             placeholder="your-email@example.com" bind:value={$form.email}  {...$constraints.email}
             aria-invalid={$errors.email? 'true' : undefined}>
 
             <span>
-                <input 
+                <input class="animateOnView" 
                 type="text"
                 name="childFirstName" 
                 placeholder="Child First Name" bind:value={$form.childFirstName}  {...$constraints.childFirstName}
                 aria-invalid={$errors.childFirstName ? 'true' : undefined}>
 
-                <input 
+                <input class="animateOnView" 
                 type="text" 
                 name="childLastName" 
                 placeholder="Child Last Name" bind:value={$form.childLastName}  {...$constraints.childLastName}
@@ -74,10 +74,10 @@
             {#if $errors.childFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.childLastName}<span class="invalid">{$errors.name}</span>{/if}
             <br>
-            <input type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
-            <input type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
-            <input type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
-            <button>SUBMIT</button>
+            <input class="animateOnView" type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
+            <input class="animateOnView" type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
+            <input class="animateOnView" type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
+            <button class="animateOnView">SUBMIT</button>
         </form>
     {/if} 
 </section>
@@ -143,6 +143,21 @@
                     background-color: #40bda8;
                 }
             }
+        }
+    }
+
+    .animateOnView {
+        opacity: 1;
+        view-timeline-name: --item-timeline;
+        animation: slide-fade-in both;
+        animation-timeline: --item-timeline;
+        animation-range: contain 0% contain 15%;
+    }
+
+    @keyframes slide-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(5vh);
         }
     }
 </style>
