@@ -83,15 +83,16 @@
     }
     .animateOnView {
         opacity: 1;
-        view-timeline-name: --item-timeline;
+        scale: 1;
         animation: slide-fade-in both;
-        animation-timeline: --item-timeline;
-        animation-range: contain 15% contain 45%;
+        animation-timeline: view();
+        animation-range: contain 10% contain 35%;
     }
 
     @keyframes slide-fade-in {
         from {
             opacity: 0;
+            scale: 0;
             transform: translateY(5vh);
         }
     }

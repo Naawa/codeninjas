@@ -24,7 +24,7 @@
         </h4>
     {:else}
         <form method="POST" use:enhance>
-            <select bind:value={$form.dojo} name="dojo">
+            <select bind:value={$form.dojo} name="dojo" class="animateOnView" >
                 <option>Select A Location</option>
                 {#each dojos as dojo}
                     <option>{dojo}</option>
@@ -145,18 +145,18 @@
             }
         }
     }
-
     .animateOnView {
         opacity: 1;
-        view-timeline-name: --item-timeline;
+        scale: 1;
         animation: slide-fade-in both;
-        animation-timeline: --item-timeline;
-        animation-range: contain 0% contain 15%;
+        animation-timeline: view();
+        animation-range: entry contain 15%;
     }
 
     @keyframes slide-fade-in {
         from {
             opacity: 0;
+            scale: 0;
             transform: translateY(5vh);
         }
     }
