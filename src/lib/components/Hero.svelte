@@ -11,7 +11,7 @@
 </script>
 <section>
     {#if animate}
-    <video src="https://c3mpuncadl9iaete.public.blob.vercel-storage.com/West%20Coquitlam%20Center-0bTruXZiYdeo6soxgSsGFVoj3P3V2U.mp4" autoplay loop muted>
+    <video src="https://9dncyg7f0qyulfyf.public.blob.vercel-storage.com/West%20Coquitlam%20Center-bMaupPqxFC9Ih37NVywKq6Jzl1YfYS.mp4" autoplay loop muted>
         <track kind="captions">
     </video>
     <div>
