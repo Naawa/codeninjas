@@ -140,8 +140,7 @@
         position: relative;
         display: grid;
         grid-auto-flow: column;
-        scroll-snap-type: mandatory;
-        scroll-snap-align: start;
+        scroll-snap-type: x mandatory;
 
         span {
             width: 100vw;
@@ -151,6 +150,7 @@
             align-items: center;
             gap: 1em;
             padding: 0 10%;
+            scroll-snap-align: start;
 
             div {
                 display: flex;
