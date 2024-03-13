@@ -46,11 +46,10 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
         width: 100%;
-        min-height: 60vh;
-        padding: 4em 0;
-
+        min-height: fit-content;
+        padding: 4em 0 0;
 
         p {
             text-wrap: balance;
@@ -84,6 +83,7 @@
                 &:first-of-type {
                     color: #506690;
                     letter-spacing: normal;
+                    margin: 3em;
                 }
             }
         }

@@ -24,6 +24,7 @@
         border: solid 1px;
         position: relative;
         max-height: 85dvh;
+        margin: 4em;
 
         div {
             position: absolute;
@@ -51,7 +52,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                min-width: 15vw;
+                min-width: 20vw;
                 min-height: 100px;
                 gap: 1px;
                 translate: 0 70%;
