@@ -163,37 +163,23 @@
         }
     }
 
-    #slideCounter {
-        height: fit-content;
-        width: fit-content;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-
-        div {
-            height: 1em;
-            width: 1em;
-            border-radius: 10em;
-            border: solid 2px black;
-        }
-    }
-
     @media (width < 800px) {
         section {
             height: fit-content;
             span {
                 flex-direction: column;
                 height: fit-content;
+                gap: 1em;
                 
                 div {
                     position: relative;
                     width: 100%;
                     min-height: fit-content;
-                    justify-content: start;
+                    height: fit-content;
+                    justify-content: center;
                     
                     &:last-of-type {
+                        justify-content: center;
                         order: -1;
                         min-height: 35vh;
                     }
@@ -206,7 +192,7 @@
                     img {
                         position: absolute;
                         min-width: 100px;
-                        height: 80%;
+                        width: 60vw;
                     }
                 }
             }
