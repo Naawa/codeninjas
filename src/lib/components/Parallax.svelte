@@ -8,10 +8,9 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
-        top: 0;
         position: fixed;
-        z-index: -3;
+        top: 0;
     }
 </style>

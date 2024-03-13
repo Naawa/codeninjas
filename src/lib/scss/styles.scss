@@ -35,6 +35,7 @@ html {
     scroll-behavior: smooth;
 
     body {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: clamp(250px, 100%, 100dvw);

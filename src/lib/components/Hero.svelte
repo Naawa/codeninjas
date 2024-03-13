@@ -44,10 +44,10 @@
         }
 
         div, button {
-            z-index: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5em;
+            z-index: 1;
 
             h1, p {
                 color: white;
