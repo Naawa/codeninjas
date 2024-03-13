@@ -104,7 +104,6 @@
 
 <style lang="scss">
     section {
-        margin: 4em 0 0;
         height: 60vh;
         width: 100vw;
         overflow-x: scroll;
@@ -120,7 +119,7 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 0 10%;
+            padding: 0 15%;
             scroll-snap-align: start;
             scroll-snap-stop: always;  
 
@@ -129,9 +128,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 100%;
                 min-width: 200px;
-                width: 50vw;
+                width: 40vw;
+                height: 50vh;
                 position: relative;
               
                 span {
@@ -147,10 +146,11 @@
 
                 &:last-of-type {
                     align-items: center;
+                    order: -1;
                 }
 
                 img {
-                    position: absolute;
+                    position: relative;
                     max-height: 40vh;
                 }
 
