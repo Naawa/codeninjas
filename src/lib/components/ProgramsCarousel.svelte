@@ -150,7 +150,7 @@
             align-items: center;
             gap: 1em;
             padding: 0 10%;
-            scroll-snap-align: center;
+            scroll-snap-align: start;
 
             div {
                 display: flex;
@@ -168,6 +168,7 @@
                     flex-direction: row;
                     justify-content: space-between;
                     padding: 0;
+                    scroll-snap-align: none;
                 }
 
                 &:last-of-type {
