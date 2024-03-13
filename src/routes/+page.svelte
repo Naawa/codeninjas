@@ -5,6 +5,7 @@
 	import InquiryForm from "$lib/components/InquiryForm.svelte";
 	import LocationMap from "$lib/components/LocationMap.svelte";
 	import ProgramsHeading from "$lib/components/ProgramsHeading.svelte";
+	import LocationsHeading from "$lib/components/LocationsHeading.svelte";
 	export let data;
 </script>
 
@@ -12,5 +13,6 @@
 <About></About>
 <ProgramsHeading></ProgramsHeading>
 <ProgramsCarousel></ProgramsCarousel>
+<LocationsHeading></LocationsHeading>
 <LocationMap></LocationMap>
 <InquiryForm {data}></InquiryForm>

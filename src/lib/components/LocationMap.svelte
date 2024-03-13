@@ -24,7 +24,7 @@
         border: solid 1px;
         position: relative;
         max-height: 85dvh;
-        margin: 4em;
+        margin: 4em 0;
 
         div {
             position: absolute;

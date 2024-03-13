@@ -1,8 +1,8 @@
-<section id="programs">
-    <p>WHAT WE OFFER</p>
+<section id="locations">
+    <p>FIND A LOCATION</p>
     <div class="subheading">
-        <h3>YEAR ROUND</h3>
-        <h3>PROGRAMS</h3>
+        <h3>OUR</h3>
+        <h3>DOJOS</h3>
     </div>
 </section>
 
@@ -16,8 +16,7 @@
         gap: 1em;
         width: 100%;
         min-height: fit-content;
-        padding: 4em 0 0;
-
+        margin: 4em  0 0;
 
         p {
             text-wrap: balance;

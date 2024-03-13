@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<section>
+<section id="about">
     <p>OUR MISSION</p>
     <div class="subheading">
         <h3>WE MAKE</h3>

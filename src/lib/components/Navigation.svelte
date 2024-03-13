@@ -28,15 +28,15 @@
             <span></span>
         </button>
         <a href="/"><img src="/images/logo.png" alt="Logo" transition:fly={{ y: -100, duration: 1000 }}></a>
-        <a href="/"><img src="/images/locationIcon.svg" alt="Location Icon" transition:fly={{ x: 100, duration: 1000 }}></a>
+        <a href="#locations"><img src="/images/locationIcon.svg" alt="Location Icon" transition:fly={{ x: 100, duration: 1000 }}></a>
     {/if}
 </nav>
 
 {#if showMenu}
     <div transition:fly={{ y: 200, duration: 400 }}>
-        <a href="/" on:click={toggleMenu}>Programs</a>
-        <a href="/" on:click={toggleMenu}>About</a>
-        <a href="/" on:click={toggleMenu}>Contact</a>
+        <a href="#programs" on:click={toggleMenu}>Programs</a>
+        <a href="#about" on:click={toggleMenu}>About</a>
+        <a href="#contact" on:click={toggleMenu}>Contact</a>
     </div>
 {/if}
 

@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { reveal } from "svelte-reveal";
-	import { scale, fly, slide } from "svelte/transition";
-
     let backgrounds = ["", "", "", "", "", ""]
 
     interface CNProgram {
@@ -77,33 +74,6 @@
             bg: backgrounds[4],
         },
     ]
-    
-    let index = 0;
-    let display: CNProgram = programs[index];
-
-    function next() {
-        if(index < programs.length - 1) {
-            console.log(index, programs.length)
-            index++;
-            display = programs[index];
-        }
-        else {
-            index = 0;
-            display = programs[index];
-        }
-    }
-
-    function prev() {
-        if(index > 0) {
-            index--;
-            display = programs[index];
-        }
-        else {
-            index = programs.length - 1;
-            display = programs[index];
-        }
-    }
-
 </script>
 
 <section>
@@ -151,7 +121,8 @@
             gap: 1em;
             padding: 0 10%;
             scroll-snap-align: start;
-            scroll-snap-stop: always;
+            scroll-snap-stop: always;  
+
 
             div {
                 display: flex;
@@ -191,19 +162,39 @@
         }
     }
 
+    #slideCounter {
+        height: fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        div {
+            height: 1em;
+            width: 1em;
+            border-radius: 10em;
+            border: solid 2px black;
+        }
+    }
+
     @media (width < 800px) {
         section {
             height: fit-content;
             span {
                 flex-direction: column;
+                height: fit-content;
+                
                 div {
                     position: relative;
                     width: 100%;
-                    min-height: 40vh;
+                    min-height: fit-content;
                     justify-content: start;
                     
                     &:last-of-type {
                         order: -1;
+                        min-height: 35vh;
                     }
 
                     span, p {
