@@ -150,7 +150,7 @@
             align-items: center;
             gap: 1em;
             padding: 0 10%;
-            scroll-snap-align: start;
+            scroll-snap-align: center;
 
             div {
                 display: flex;
