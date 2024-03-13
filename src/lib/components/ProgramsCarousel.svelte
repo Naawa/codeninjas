@@ -150,15 +150,15 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 0 10vw;
+            padding: 0 5vw;
 
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 height: 100%;
-                min-width: 400px;
-                width: 30vw;
+                min-width: 200px;
+                width: 50vw;
                 position: relative;
               
                 span {
@@ -198,6 +198,7 @@
                     position: relative;
                     width: 100%;
                     min-height: 40vh;
+                    justify-content: start;
                     
                     &:last-of-type {
                         order: -1;
