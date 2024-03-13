@@ -1,9 +1,5 @@
-<script>
-	import { reveal } from "svelte-reveal";
-</script>
-
 <section>
-    <p class=".hidden">WHAT WE OFFER</p>
+    <p>WHAT WE OFFER</p>
     <div class="subheading">
         <h3>YEAR ROUND</h3>
         <h3>PROGRAMS</h3>

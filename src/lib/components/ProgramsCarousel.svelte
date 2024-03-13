@@ -150,7 +150,7 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 0 5%;
+            padding: 0 10%;
 
             div {
                 display: flex;
@@ -193,7 +193,6 @@
             height: fit-content;
             span {
                 flex-direction: column;
-                gap: 2em;
                 div {
                     position: relative;
                     width: 100%;
@@ -212,7 +211,7 @@
                     img {
                         position: absolute;
                         min-width: 100px;
-                        height: 100%;
+                        height: 80%;
                     }
                 }
             }

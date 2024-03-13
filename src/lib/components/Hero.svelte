@@ -38,7 +38,8 @@
             opacity: 0.7;
             position: absolute;
             aspect-ratio: 16/9;
-            height: 80vh;
+            min-height: 80vh;
+            min-width: 100vw;
             pointer-events: none;
         }
 
