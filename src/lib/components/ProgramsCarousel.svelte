@@ -100,6 +100,7 @@
         </span>
     {/each}
 </section>
+<p>- Swipe Left -</p>
 
 <style lang="scss">
     section {
