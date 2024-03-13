@@ -151,6 +151,7 @@
             gap: 1em;
             padding: 0 10%;
             scroll-snap-align: start;
+            scroll-snap-stop: always;
 
             div {
                 display: flex;
@@ -169,6 +170,7 @@
                     justify-content: space-between;
                     padding: 0;
                     scroll-snap-align: none;
+                    scroll-snap-stop: normal;
                 }
 
                 &:last-of-type {
