@@ -118,8 +118,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1em;
-            padding: 0 15%;
+            gap: 5em;
+            padding: 0 10%;
             scroll-snap-align: start;
             scroll-snap-stop: always;  
 
