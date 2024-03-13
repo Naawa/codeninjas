@@ -14,10 +14,10 @@
 </script>
 
 <section id="contact">
-    <p use:reveal={{ transition: "fly", duration: 200, reset: true }} >REQUEST INFO</p>
+    <p>REQUEST INFO</p>
     <div>
-        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }} >EMPOWER</h3>
-        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }} >THEIR FUTURE</h3>
+        <h3>EMPOWER</h3>
+        <h3>THEIR FUTURE</h3>
     </div>
     {#if $message}
         <h4>
@@ -25,19 +25,19 @@
         </h4>
     {:else}
         <form method="POST" use:enhance>
-            <select bind:value={$form.dojo} name="dojo" use:reveal={{ transition: "fly", duration: 200, reset: true }} >
+            <select bind:value={$form.dojo} name="dojo" >
                 <option>Select A Location</option>
                 {#each dojos as dojo}
                     <option>{dojo}</option>
                 {/each}
             </select>
             <span>
-                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+                <input 
                 type="text" 
                 name="parentFirstName" placeholder="Parent First Name" bind:value={$form.parentFirstName}  {...$constraints.parentFirstName}
                 aria-invalid={$errors.parentFirstName ? 'true' : undefined}>
 
-                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+                <input 
                 type="text" 
                 name="parentLastName" 
                 placeholder="Parent Last Name" 
@@ -46,26 +46,26 @@
             </span>
             {#if $errors.parentFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.parentLastName}<span class="invalid">{$errors.name}</span>{/if}
-            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+            <input 
             type="text" 
             name="contactNumber" 
             placeholder="(000)-000-0000" bind:value={$form.contactNumber}  {...$constraints.contactNumber}
             aria-invalid={$errors.contactNumber ? 'true' : undefined} maxlength="10">
 
-            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+            <input 
             type="email" 
             name="email" 
             placeholder="your-email@example.com" bind:value={$form.email}  {...$constraints.email}
             aria-invalid={$errors.email? 'true' : undefined}>
 
             <span>
-                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+                <input 
                 type="text"
                 name="childFirstName" 
                 placeholder="Child First Name" bind:value={$form.childFirstName}  {...$constraints.childFirstName}
                 aria-invalid={$errors.childFirstName ? 'true' : undefined}>
 
-                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
+                <input 
                 type="text" 
                 name="childLastName" 
                 placeholder="Child Last Name" bind:value={$form.childLastName}  {...$constraints.childLastName}
@@ -75,10 +75,10 @@
             {#if $errors.childFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.childLastName}<span class="invalid">{$errors.name}</span>{/if}
             <br>
-            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
-            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
-            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
-            <button use:reveal={{ transition: "fly", duration: 200, reset: true }}>SUBMIT</button>
+            <input type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
+            <input type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
+            <input type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
+            <button>SUBMIT</button>
         </form>
     {/if} 
 </section>

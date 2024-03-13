@@ -3,10 +3,10 @@
 </script>
 
 <section>
-    <p use:reveal={{ transition: "scale", duration: 200,  reset: true }}>WHAT WE OFFER</p>
+    <p class=".hidden">WHAT WE OFFER</p>
     <div class="subheading">
-        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }}>YEAR ROUND</h3>
-        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }}>PROGRAMS</h3>
+        <h3>YEAR ROUND</h3>
+        <h3>PROGRAMS</h3>
     </div>
 </section>
 

@@ -111,21 +111,21 @@
         <span id="slide{i}">
             <div>
                 <span>
-                    <h4 use:reveal={{ transition: "fly", duration: 300, reset: true }}>{program.name}</h4>
-                    <h4 use:reveal={{ transition: "fly", duration: 300, reset: true }}>AGES {program.ages}</h4>
+                    <h4>{program.name}</h4>
+                    <h4>AGES {program.ages}</h4>
                 </span>
-                <p use:reveal={{ transition: "fly", duration: 300, reset: true }}>{program.description}</p>
-                <h4 use:reveal={{ transition: "fly", duration: 300, reset: true }}>PREREQUISITES</h4>
-                <p use:reveal={{ transition: "fly", duration: 300, reset: true }}>{program.prereq}</p>
-                <h4 use:reveal={{ transition: "fly", duration: 300, reset: true }}>TOPICS COVERED</h4>
-                <p use:reveal={{ transition: "fly", duration: 300, reset: true }}>{program.topics}</p>
+                <p>{program.description}</p>
+                <h4>PREREQUISITES</h4>
+                <p>{program.prereq}</p>
+                <h4>TOPICS COVERED</h4>
+                <p>{program.topics}</p>
                 {#if program.pl}
-                    <h4 use:reveal={{ transition: "fly", duration: 300, reset: true }}>PROGRAMMING LANGUAGES</h4>
-                    <p use:reveal={{ transition: "fly", duration: 300, reset: true }}>{program.pl}</p>
+                    <h4>PROGRAMMING LANGUAGES</h4>
+                    <p>{program.pl}</p>
                 {/if}
             </div>
             <div>
-                <img src={program.focus} alt="" use:reveal={{ transition: "scale", duration: 300, reset: true }}>
+                <img src={program.focus} alt="">
             </div>
         </span>
     {/each}
@@ -150,7 +150,7 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 0 5vw;
+            padding: 0 5%;
 
             div {
                 display: flex;
