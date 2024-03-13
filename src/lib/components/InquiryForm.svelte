@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { dojos } from "$lib/utils/dojos";
+	import { reveal } from "svelte-reveal";
 	import SuperDebug, { superForm } from "sveltekit-superforms";
 
 
@@ -13,10 +14,10 @@
 </script>
 
 <section id="contact">
-    <p class="animateOnView" >REQUEST INFO</p>
+    <p use:reveal={{ transition: "fly", duration: 200, reset: true }} >REQUEST INFO</p>
     <div>
-        <h3 class="animateOnView" >EMPOWER</h3>
-        <h3 class="animateOnView" >THEIR FUTURE</h3>
+        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }} >EMPOWER</h3>
+        <h3 use:reveal={{ transition: "fly", duration: 200, reset: true }} >THEIR FUTURE</h3>
     </div>
     {#if $message}
         <h4>
@@ -24,19 +25,19 @@
         </h4>
     {:else}
         <form method="POST" use:enhance>
-            <select bind:value={$form.dojo} name="dojo" class="animateOnView" >
+            <select bind:value={$form.dojo} name="dojo" use:reveal={{ transition: "fly", duration: 200, reset: true }} >
                 <option>Select A Location</option>
                 {#each dojos as dojo}
                     <option>{dojo}</option>
                 {/each}
             </select>
             <span>
-                <input class="animateOnView" 
+                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
                 type="text" 
                 name="parentFirstName" placeholder="Parent First Name" bind:value={$form.parentFirstName}  {...$constraints.parentFirstName}
                 aria-invalid={$errors.parentFirstName ? 'true' : undefined}>
 
-                <input class="animateOnView" 
+                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
                 type="text" 
                 name="parentLastName" 
                 placeholder="Parent Last Name" 
@@ -45,26 +46,26 @@
             </span>
             {#if $errors.parentFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.parentLastName}<span class="invalid">{$errors.name}</span>{/if}
-            <input class="animateOnView" 
+            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
             type="text" 
             name="contactNumber" 
             placeholder="(000)-000-0000" bind:value={$form.contactNumber}  {...$constraints.contactNumber}
             aria-invalid={$errors.contactNumber ? 'true' : undefined} maxlength="10">
 
-            <input class="animateOnView" 
+            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
             type="email" 
             name="email" 
             placeholder="your-email@example.com" bind:value={$form.email}  {...$constraints.email}
             aria-invalid={$errors.email? 'true' : undefined}>
 
             <span>
-                <input class="animateOnView" 
+                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
                 type="text"
                 name="childFirstName" 
                 placeholder="Child First Name" bind:value={$form.childFirstName}  {...$constraints.childFirstName}
                 aria-invalid={$errors.childFirstName ? 'true' : undefined}>
 
-                <input class="animateOnView" 
+                <input use:reveal={{ transition: "fly", duration: 200, reset: true }} 
                 type="text" 
                 name="childLastName" 
                 placeholder="Child Last Name" bind:value={$form.childLastName}  {...$constraints.childLastName}
@@ -74,10 +75,10 @@
             {#if $errors.childFirstName}<span class="invalid">{$errors.name}</span>{/if}
             {#if $errors.childLastName}<span class="invalid">{$errors.name}</span>{/if}
             <br>
-            <input class="animateOnView" type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
-            <input class="animateOnView" type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
-            <input class="animateOnView" type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
-            <button class="animateOnView">SUBMIT</button>
+            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
+            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
+            <input use:reveal={{ transition: "fly", duration: 200, reset: true }} type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
+            <button use:reveal={{ transition: "fly", duration: 200, reset: true }}>SUBMIT</button>
         </form>
     {/if} 
 </section>
@@ -143,21 +144,6 @@
                     background-color: #40bda8;
                 }
             }
-        }
-    }
-    .animateOnView {
-        opacity: 1;
-        scale: 1;
-        animation: slide-fade-in both;
-        animation-timeline: view();
-        animation-range: entry contain 15%;
-    }
-
-    @keyframes slide-fade-in {
-        from {
-            opacity: 0;
-            scale: 0;
-            transform: translateY(5vh);
         }
     }
 </style>

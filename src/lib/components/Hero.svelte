@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from "$app/environment";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
@@ -10,10 +10,9 @@
     })
 </script>
 <section>
+    <iframe src="https://www.youtube.com/embed/uzZstlbtTD4?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=uzZstlbtTD4" frameborder="0" title="West Coquitlam Center">
+    </iframe>
     {#if animate}
-    <video src="https://9dncyg7f0qyulfyf.public.blob.vercel-storage.com/West%20Coquitlam%20Center-bMaupPqxFC9Ih37NVywKq6Jzl1YfYS.mp4" autoplay loop muted>
-        <track kind="captions">
-    </video>
     <div>
         <h1 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h1>
         <p transition:fly={{ y: 50, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
@@ -35,10 +34,13 @@
         gap: 2em;
         overflow: hidden;
         
-        video {
-            opacity: 0.3;
+        iframe {
+            opacity: 0.7;
             position: absolute;
             min-height: 70vh;
+            width: 100%;
+            scale: 1.6;
+            pointer-events: none;
         }
 
         div, button {

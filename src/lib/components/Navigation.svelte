@@ -6,6 +6,12 @@
     function toggleMenu() {
         showMenu = !showMenu;
         document.querySelector("button")?.classList.toggle("inactive");
+        if(!showMenu) {
+            document.body.style.overflowY = "scroll";
+        }
+        else {
+            document.body.style.overflowY = "hidden";
+        }
     }
 
     let animate = false;
@@ -28,9 +34,9 @@
 
 {#if showMenu}
     <div transition:fly={{ y: 200, duration: 400 }}>
-        <a href="/">Programs</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
+        <a href="/" on:click={toggleMenu}>Programs</a>
+        <a href="/" on:click={toggleMenu}>About</a>
+        <a href="/" on:click={toggleMenu}>Contact</a>
     </div>
 {/if}
 
