@@ -154,7 +154,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1em;
+            gap: 2em;
             padding: 0 10%;
             scroll-snap-align: center;
             scroll-snap-stop: always; 
