@@ -100,6 +100,13 @@
             slides[slideIndex - 1].style.display = "flex";  
         }
     }
+
+    let autoplay: any;
+
+    $: {
+        clearInterval(autoplay);
+        autoplay = setInterval(() => scroll(1), 8000);
+    }
 </script>
 
 <section id="carousel">
