@@ -179,8 +179,8 @@
 
                 img {
                     position: absolute;
+                    max-height: 100%;
                     max-width: 100%;
-                    border-radius: 0.5em;
                 }
 
                 p {
