@@ -13,56 +13,73 @@
     <iframe src="https://www.youtube.com/embed/uzZstlbtTD4?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&enablejsapi=1&playlist=uzZstlbtTD4"title="West Coquitlam Center">
     </iframe>
     {#if animate}
-    <div>
-        <h1 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h1>
-        <p transition:fly={{ y: 50, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
-    </div>
-    <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'start', behavior: 'smooth' })}}} transition:fly={{ y: 50, duration: 1000}}>Learn More</button>
+    <img src="/images/logo.png" alt="Logo.">
+    <span>
+        <div>
+            <h1 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h1>
+            <p transition:fly={{ y: 50, duration: 800}} >Blocks, JavaScript, Lua, C# and More!</p>
+        </div>
+        <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'start', behavior: 'smooth' })}}} transition:fly={{ y: 50, duration: 1000}}>Learn More</button>
+    </span>
     {/if}
 </section>
 
 <style lang="scss">
     section {
         width: 100%;
-        height: 70dvh;
+        height: 85dvh;
         display: flex;
-        justify-content: center;
+        justify-content: normal;
         align-items: center;
         background-color: black;
         position: relative;
         flex-direction: column;
-        gap: 2em;
+        gap: 12em;
         overflow: hidden;
         
         iframe {
-            opacity: 0.7;
+            opacity: 0.6;
             position: absolute;
             aspect-ratio: 16/9;
-            min-height: 80vh;
+            min-height: 90vh;
             min-width: 100vw;
             pointer-events: none;
         }
 
-        div, button {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
+        img {
+            height: 15vh;
             z-index: 1;
-
-            h1, p {
-                color: white;
-                text-align: center;
-            }
+            margin: 4em;
         }
 
-        button {
-            min-width: fit-content;
-            padding: 0.5em 2em;
-            color: white;
-            background-color: hsl(165, 67%, 58%);
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
 
-            &:hover {
-                background-color: hsl(165, 49%, 39%);
+            div, button {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                z-index: 1;
+
+                h1, p {
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            button {
+                min-width: fit-content;
+                padding: 0.5em 2em;
+                color: white;
+                background-color: hsl(165, 67%, 58%);
+
+                &:hover {
+                    background-color: hsl(165, 49%, 39%);
+                }
             }
         }
     }

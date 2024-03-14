@@ -76,10 +76,46 @@
             bg: backgrounds[4],
         },
     ]
+    
+    let i = 0;
 
     function scrollNext() {
-        
+        if(i < programs.length - 1) {
+            i++;
+            if(browser) {
+                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+        }
+        else {
+            i = 0;
+            if(browser) {
+                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+        }
     }
+    function scrollPrev() {
+        if(i > 0) {
+            i--;
+            if(browser) {
+                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+        }
+        else {
+            i = (programs.length - 1);
+            if(browser) {
+                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+        }
+    }
+
+    let autplay: any;
+
+    $: {
+        clearInterval(autplay);
+        autplay = setInterval(scrollNext, 4000)
+    }
+   
+
 </script>
 
 <section id="carousel">
@@ -107,7 +143,7 @@
     {/each}
 </section>
 <span>
-    <button>Prev</button>
+    <button on:click={scrollPrev}>Prev</button>
     <button on:click={scrollNext}>Next</button>
 </span>
 
@@ -127,9 +163,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 5em;
+            gap: 3em;
             padding: 0 10%;
-            scroll-snap-align: start;
+            scroll-snap-align: center;
             scroll-snap-stop: always;  
 
 
@@ -141,6 +177,7 @@
                 width: 40vw;
                 height: 50vh;
                 position: relative;
+                border: none;
               
                 span {
                     min-width: fit-content;
@@ -164,7 +201,7 @@
                 }
 
                 p {
-                    margin: 0.5em 0 2em;
+                    margin: 0.25em 0 1em;
                     font-size: 95%;
                     max-width: 80%;
                 }
@@ -173,15 +210,24 @@
     }
     span {
         display: flex;
-        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2em;
+        div {
+            height: 1em;
+            width: 1em;
+            border: solid 2px black;
+            border-radius: 10em;
+        }
         button {
             min-width: fit-content;
             width: fit-content;
             border-radius: 3em;
+            margin: 0 3em;
         }
     }
 
-    @media (width < 800px) {
+    @media (width < 1000px) {
         section {
             height: fit-content;
             span {

@@ -25,5 +25,4 @@
 </script>
 
 <Parallax></Parallax>
-<Navigation></Navigation>
 <slot />
