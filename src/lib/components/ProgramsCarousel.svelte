@@ -87,7 +87,7 @@
 
     function showSlides(n: number) {
         if(browser) {
-            let slides = document.getElementsByClassName("slides");
+            let slides = document.getElementsByClassName("slides") as HTMLCollectionOf<HTMLElement>;
             if (n > slides.length) {
                 slideIndex = 1;
             }    
@@ -99,13 +99,6 @@
             } 
             slides[slideIndex - 1].style.display = "flex";  
         }
-    }
-
-    let autoplay: any;
-
-    $: {
-        clearInterval(autoplay);
-        autoplay = setInterval(() => scroll(1), 8000);
     }
 </script>
 
@@ -167,7 +160,6 @@
                 width: 40vw;
                 height: 100%;
                 position: relative;
-                border: none;
               
                 span {
                     min-width: fit-content;
@@ -187,7 +179,7 @@
 
                 img {
                     position: absolute;
-                    height: 70%;
+                    max-width: 100%;
                     border-radius: 0.5em;
                 }
 
@@ -205,6 +197,7 @@
         justify-content: center;
         width: 100%;
         gap: 10vw;
+
         button {
             min-width: fit-content;
             width: fit-content;
@@ -213,7 +206,7 @@
         }
     }
 
-    @media (width < 1000px) {
+    @media (width < 800px) {
         section {
             height: fit-content;
             span {
@@ -225,13 +218,12 @@
                 div {
                     position: relative;
                     width: 100%;
-                    height: auto;
+                    height: 50%;
                     justify-content: center;
                     
                     &:last-of-type {
                         justify-content: center;
                         order: -1;
-                        min-height: 15vh;
                     }
 
                     span, p {
@@ -240,9 +232,9 @@
                     }
 
                     img {
-                        position: relative;
-                        min-width: 100px;
-                        height: 70%;
+                        position: absolute;
+                        max-height: 100%;
+                        max-width: 75%;
                     }
                 }
             }
