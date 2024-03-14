@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
+
     let backgrounds = ["", "", "", "", "", ""]
 
     interface CNProgram {
@@ -74,9 +76,13 @@
             bg: backgrounds[4],
         },
     ]
+
+    function scrollNext() {
+        
+    }
 </script>
 
-<section>
+<section id="carousel">
     {#each programs as program, i}
         <span id="slide{i}">
             <div>
@@ -102,7 +108,7 @@
 </section>
 <span>
     <button>Prev</button>
-    <button>Next</button>
+    <button on:click={scrollNext}>Next</button>
 </span>
 
 <style lang="scss">
@@ -204,7 +210,7 @@
                     img {
                         position: absolute;
                         min-width: 100px;
-                        width: 60vw;
+                        height: 25vh;
                     }
                 }
             }

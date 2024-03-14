@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
     import Navigation from "$lib/components/Navigation.svelte";
 	import Parallax from "$lib/components/Parallax.svelte";
     import "$lib/scss/styles.scss"
 	import { onMount } from "svelte";
 
-    onMount(() => {
+    if(browser) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
@@ -19,7 +20,7 @@
         })
         let elements = document.querySelectorAll('*');
         elements.forEach((el) => observer.observe(el));
-    })
+    }
 
 </script>
 
