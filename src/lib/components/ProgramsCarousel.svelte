@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
+	import { any } from "zod";
 
     let backgrounds = ["", "", "", "", "", ""]
 
@@ -100,15 +101,12 @@
         }
     }
 
+    let autoplay: any;
 
-    /**
-    let autoplay: any
-     * 
-     * $: {
+    $: {
         clearInterval(autoplay);
-        setInterval(() => scroll(1), 4000);
+        autoplay = setInterval(() => scroll(1), 4000)
     }
-    */
 </script>
 
 <section id="carousel">
