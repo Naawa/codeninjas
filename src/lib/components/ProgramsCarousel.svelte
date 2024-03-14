@@ -149,6 +149,7 @@
         display: grid;
         grid-auto-flow: column;
         scroll-snap-type: x mandatory;
+        overflow: hidden;
 
         span {
             width: 100vw;
