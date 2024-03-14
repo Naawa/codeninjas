@@ -107,8 +107,6 @@
             }
         }
     }
-
-    let autplay: any;
 </script>
 
 <section id="carousel">
