@@ -81,29 +81,25 @@
 
     function scrollNext() {
         if(i < programs.length - 1) {
-            i++;
             if(browser) {
-                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                document.getElementById(`slide${i++}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         }
         else {
-            i = 0;
             if(browser) {
-                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                document.getElementById(`slide${0}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         }
     }
     function scrollPrev() {
         if(i > 0) {
-            i--;
             if(browser) {
-                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                document.getElementById(`slide${i--}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         }
         else {
-            i = (programs.length - 1);
             if(browser) {
-                document.getElementById(`slide${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                document.getElementById(`slide${programs.length - 1}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         }
     }
@@ -147,7 +143,6 @@
         display: grid;
         grid-auto-flow: column;
         scroll-snap-type: x mandatory;
-        overflow: hidden;
 
         span {
             width: 100vw;
