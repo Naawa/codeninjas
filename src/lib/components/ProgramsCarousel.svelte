@@ -202,7 +202,7 @@
             min-width: fit-content;
             width: fit-content;
             border-radius: 3em;
-            margin: 0 0 3em;
+            margin: 1em 0 3em;
         }
     }
 
