@@ -150,15 +150,14 @@
 
         span {
             width: 100vw;
-            height: 40em;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 3em;
+            gap: 1em;
             padding: 0 10%;
             scroll-snap-align: center;
-            scroll-snap-stop: always;  
-
+            scroll-snap-stop: always; 
 
             div {
                 display: flex;
@@ -166,7 +165,7 @@
                 justify-content: center;
                 min-width: 200px;
                 width: 40vw;
-                height: 50vh;
+                height: 100%;
                 position: relative;
                 border: none;
               
@@ -188,7 +187,7 @@
 
                 img {
                     position: relative;
-                    max-height: 40vh;
+                    height: 40vh;
                 }
 
                 p {
@@ -204,12 +203,12 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 3em;
         gap: 10vw;
         button {
             min-width: fit-content;
             width: fit-content;
             border-radius: 3em;
+            margin: 0 0 3em;
         }
     }
 
@@ -218,20 +217,20 @@
             height: fit-content;
             span {
                 flex-direction: column;
-                height: 45em;
-                gap: 1em;
+                height: 40em;
+                gap: 2em;
+                padding: 0 2em;
                 
                 div {
                     position: relative;
                     width: 100%;
-                    min-height: fit-content;
-                    height: fit-content;
+                    height: auto;
                     justify-content: center;
                     
                     &:last-of-type {
                         justify-content: center;
                         order: -1;
-                        min-height: 35vh;
+                        min-height: 15vh;
                     }
 
                     span, p {
@@ -240,7 +239,7 @@
                     }
 
                     img {
-                        position: absolute;
+                        position: relative;
                         min-width: 100px;
                         height: 25vh;
                     }
