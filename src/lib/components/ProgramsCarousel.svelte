@@ -100,7 +100,10 @@
         </span>
     {/each}
 </section>
-<p>- Swipe Left -</p>
+<span>
+    <button>Prev</button>
+    <button>Next</button>
+</span>
 
 <style lang="scss">
     section {
@@ -160,6 +163,15 @@
                     max-width: 80%;
                 }
             }
+        }
+    }
+    span {
+        display: flex;
+        gap: 2em;
+        button {
+            min-width: fit-content;
+            width: fit-content;
+            border-radius: 3em;
         }
     }
 

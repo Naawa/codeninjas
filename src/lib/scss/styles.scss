@@ -68,6 +68,11 @@ button {
     border: none;
     border-radius: 0.25em;
     font-size: larger;
+    color: black;
+    background-color: rgb(231, 231, 231);
+    &:hover {
+        background-color: white;
+    }
 }
 
 input, select, option {
