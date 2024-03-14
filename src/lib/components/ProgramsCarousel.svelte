@@ -93,7 +93,10 @@
             if (n < 1) {
                 slideIndex = slides.length;
             }
-            slides[slideIndex - 1].scrollIntoView({ block: "nearest" })   
+            for(let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            } 
+            slides[slideIndex - 1].style.display = "flex";  
         }
     }
 
@@ -149,7 +152,7 @@
 
         span {
             width: 100vw;
-            height: 100%;
+            height: 40em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -202,18 +205,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.2em;
-        div {
-            height: 1em;
-            width: 1em;
-            border: solid 2px black;
-            border-radius: 10em;
-        }
+        width: 100%;
+        padding: 3em;
+        gap: 10vw;
         button {
             min-width: fit-content;
             width: fit-content;
             border-radius: 3em;
-            margin: 0 3em;
         }
     }
 
@@ -222,7 +220,7 @@
             height: fit-content;
             span {
                 flex-direction: column;
-                height: fit-content;
+                height: 45em;
                 gap: 1em;
                 
                 div {
