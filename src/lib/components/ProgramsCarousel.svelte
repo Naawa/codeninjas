@@ -79,7 +79,6 @@
     
     
     let slideIndex = 1;
-    showSlides(slideIndex);
 
     function scroll(n: number) {
         showSlides(slideIndex += n);

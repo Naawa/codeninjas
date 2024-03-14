@@ -10,7 +10,7 @@
     })
 </script>
 <section>
-    <iframe src="https://www.youtube.com/embed/uzZstlbtTD4?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&enablejsapi=1&playlist=uzZstlbtTD4"title="West Coquitlam Center">
+    <iframe src="https://www.youtube.com/embed/uzZstlbtTD4?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&enablejsapi=1&playlist=uzZstlbtTD4" frameborder="0" title="West Coquitlam Center">
     </iframe>
     {#if animate}
     <img src="/images/logo.png" alt="Logo.">
@@ -27,29 +27,30 @@
 <style lang="scss">
     section {
         width: 100%;
-        height: 85dvh;
+        height: 70dvh;
         display: flex;
         align-items: center;
         background-color: black;
         position: relative;
         flex-direction: column;
-        gap: 4em;
+        gap: 2em;
         overflow: hidden;
         
         iframe {
-            opacity: 0.6;
+            opacity: 0.8;
             position: absolute;
             aspect-ratio: 16/9;
-            min-height: 150vh;
+            min-height: 100vh;
             min-width: 100vw;
             pointer-events: none;
         }
 
         img {
             min-width: 350px;
-            width: 40vw;
+            width: 50vw;
             z-index: 1;
             margin: 4em;
+            filter: brightness(140%);
         }
 
         span {
