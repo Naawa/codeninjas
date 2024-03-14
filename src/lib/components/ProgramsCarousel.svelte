@@ -109,13 +109,6 @@
     }
 
     let autplay: any;
-
-    $: {
-        clearInterval(autplay);
-        autplay = setInterval(scrollNext, 4000)
-    }
-   
-
 </script>
 
 <section id="carousel">

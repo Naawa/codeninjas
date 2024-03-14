@@ -29,25 +29,25 @@
         width: 100%;
         height: 85dvh;
         display: flex;
-        justify-content: normal;
         align-items: center;
         background-color: black;
         position: relative;
         flex-direction: column;
-        gap: 12em;
+        gap: 4em;
         overflow: hidden;
         
         iframe {
             opacity: 0.6;
             position: absolute;
             aspect-ratio: 16/9;
-            min-height: 110vh;
+            min-height: 150vh;
             min-width: 100vw;
             pointer-events: none;
         }
 
         img {
-            height: 15vh;
+            min-width: 350px;
+            width: 40vw;
             z-index: 1;
             margin: 4em;
         }
