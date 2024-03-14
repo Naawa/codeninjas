@@ -50,7 +50,6 @@
             width: 50vw;
             z-index: 1;
             margin: 4em;
-            filter: brightness(140%);
         }
 
         span {
