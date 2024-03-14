@@ -77,37 +77,41 @@
         },
     ]
     
-    let i = 0;
+    
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    function scrollNext() {
-        if(i < programs.length - 1) {
-            if(browser) {
-                document.getElementById(`slide${i++}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    function scroll(n: number) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n: number) {
+        if(browser) {
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }    
+            if (n < 1) {
+                slideIndex = slides.length;
             }
-        }
-        else {
-            if(browser) {
-                document.getElementById(`slide${0}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-            }
+            slides[slideIndex - 1].scrollIntoView({ block: "nearest" })   
         }
     }
-    function scrollPrev() {
-        if(i > 0) {
-            if(browser) {
-                document.getElementById(`slide${i--}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-            }
-        }
-        else {
-            if(browser) {
-                document.getElementById(`slide${programs.length - 1}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-            }
-        }
+
+
+    /**
+    let autoplay: any
+     * 
+     * $: {
+        clearInterval(autoplay);
+        setInterval(() => scroll(1), 4000);
     }
+    */
 </script>
 
 <section id="carousel">
     {#each programs as program, i}
-        <span id="slide{i}">
+        <span class="slides">
             <div>
                 <span>
                     <h4>{program.name}</h4>
@@ -130,15 +134,15 @@
     {/each}
 </section>
 <span>
-    <button on:click={scrollPrev}>Prev</button>
-    <button on:click={scrollNext}>Next</button>
+    <button on:click={() => scroll(-1)}>Prev</button>
+    <button on:click={() => scroll(1)}>Next</button>
 </span>
 
 <style lang="scss">
     section {
         height: 60vh;
         width: 100vw;
-        overflow-x: scroll;
+        overflow: hidden;
         position: relative;
         display: grid;
         grid-auto-flow: column;
