@@ -179,7 +179,7 @@
 
                 img {
                     position: absolute;
-                    max-height: 100%;
+                    max-height: 70%;
                     max-width: 100%;
                 }
 
