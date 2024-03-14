@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
-    import Navigation from "$lib/components/Navigation.svelte";
 	import Parallax from "$lib/components/Parallax.svelte";
     import "$lib/scss/styles.scss"
-	import { onMount } from "svelte";
 
     if(browser) {
         const observer = new IntersectionObserver((entries) => {

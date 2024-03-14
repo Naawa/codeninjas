@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
-	import { any } from "zod";
+	import "$lib/scss/blobz.min.css"
 
     let backgrounds = ["", "", "", "", "", ""]
 
@@ -23,7 +23,7 @@
             prereq: "Reading Ability in English",
             topics: "Basic to professional game development.",
             pl: "JavaScript, Lua, and C#",
-            focus: "/images/createFocus.png",
+            focus: "/images/createFocus.jpg",
             bg: backgrounds[0],
         },
         {
@@ -100,17 +100,10 @@
             slides[slideIndex - 1].style.display = "flex";  
         }
     }
-
-    let autoplay: any;
-
-    $: {
-        clearInterval(autoplay);
-        autoplay = setInterval(() => scroll(1), 4000)
-    }
 </script>
 
 <section id="carousel">
-    {#each programs as program, i}
+    {#each programs as program }
         <span class="slides">
             <div>
                 <span>
@@ -186,8 +179,9 @@
                 }
 
                 img {
-                    position: relative;
-                    height: 40vh;
+                    position: absolute;
+                    height: 70%;
+                    border-radius: 0.5em;
                 }
 
                 p {
@@ -241,7 +235,7 @@
                     img {
                         position: relative;
                         min-width: 100px;
-                        height: 25vh;
+                        height: 70%;
                     }
                 }
             }
