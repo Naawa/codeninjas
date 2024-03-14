@@ -47,13 +47,17 @@
         gap: 1em;
         width: 100%;
         min-height: fit-content;
-        padding: 4em 0 0;
+        padding: 1em;
+        height: 60vh;
+        border-bottom: solid 2px rgba(0, 0, 0, 0.082);
 
         p {
             text-wrap: balance;
-            max-width: 80dvw;
+            max-width: 70dvw;
+            margin: 1em 0 0;
 
             &:first-of-type {
+                margin: 0;
                 color: #2c638fb6;
                 letter-spacing: 0.1em;
             }   
@@ -81,7 +85,6 @@
                 &:first-of-type {
                     color: #506690;
                     letter-spacing: normal;
-                    margin: 3em;
                 }
             }
         }
@@ -94,7 +97,7 @@
             align-items: center;
             padding: 1em 0;
             flex-wrap: wrap;
-            margin: 2em 0 0;
+            margin: 3em 0 0;
 
             img {
                 height: 2em;

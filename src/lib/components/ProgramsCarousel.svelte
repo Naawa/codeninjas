@@ -141,6 +141,7 @@
         grid-auto-flow: column;
         scroll-snap-type: x mandatory;
 
+
         span {
             width: 100vw;
             height: 100%;
@@ -151,6 +152,7 @@
             padding: 0 10%;
             scroll-snap-align: center;
             scroll-snap-stop: always; 
+            border: none;
 
             div {
                 display: flex;
@@ -170,6 +172,7 @@
                     padding: 0;
                     scroll-snap-align: none;
                     scroll-snap-stop: normal;
+                    border: none;
                 }
 
                 &:last-of-type {
@@ -197,6 +200,7 @@
         justify-content: center;
         width: 100%;
         gap: 10vw;
+        border-bottom: solid 2px rgba(0, 0, 0, 0.082);
 
         button {
             min-width: fit-content;
