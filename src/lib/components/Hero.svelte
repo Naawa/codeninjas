@@ -41,7 +41,7 @@
             opacity: 0.6;
             position: absolute;
             aspect-ratio: 16/9;
-            min-height: 90vh;
+            min-height: 110vh;
             min-width: 100vw;
             pointer-events: none;
         }
