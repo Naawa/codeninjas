@@ -60,7 +60,7 @@
                 position: absolute;
                 
                 p {
-                    background-color: rgb(0, 145, 182);
+                    background-color: #187abf;
                     color: white;
                     width: 100%;
                     justify-content: center;
