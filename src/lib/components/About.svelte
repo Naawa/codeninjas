@@ -46,7 +46,7 @@
         gap: 1em;
         width: 100%;
         min-height: fit-content;
-        padding: 1em;
+        padding: 4em;
         background-image: url('images/gradientbg.png');
         background-size: 100% 100%;       
 
@@ -109,9 +109,11 @@
         }
 
         iframe {
-            width: clamp(200px, 100%, 70vw);
             aspect-ratio: 16/9;
-            height: 100%;
+            min-height: 400px;
+            max-height: 60vh;
+            min-width: 300px;
+            max-width: 90vw;
             pointer-events: all;
             border-radius: 1em;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.39);
