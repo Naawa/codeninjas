@@ -29,7 +29,7 @@
         gap: 4em;
         padding: 8em;
         background: rgb(98,160,193);
-        background: linear-gradient(138deg, rgb(24, 132, 190) 0%, rgb(0, 95, 173) 100%);
+        background: linear-gradient(138deg, rgb(20, 136, 199) 0%, rgb(0, 76, 138) 100%);
         width: 100%;
         position: relative;
         overflow: hidden;
