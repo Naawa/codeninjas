@@ -8,7 +8,6 @@
 	import Create from "$lib/components/Create.svelte";
 	import Junior from "$lib/components/Junior.svelte";
 	import Camps from "$lib/components/Camps.svelte";
-	import OtherPrograms from "$lib/components/OtherPrograms.svelte";
 	import Impact from "$lib/components/Impact.svelte";
 	export let data;
 </script>
