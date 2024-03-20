@@ -16,7 +16,7 @@
                 }
             })
         })
-        let elements = document.querySelectorAll('*');
+        let elements = document.querySelectorAll('*:not(section):not(iframe):not(img)');
         elements.forEach((el) => observer.observe(el));
     }
 

@@ -1,18 +1,24 @@
 <script>
 	import About from "$lib/components/About.svelte";
-	import ProgramsCarousel from "$lib/components/ProgramsCarousel.svelte";
 	import Hero from "$lib/components/Hero.svelte";
 	import InquiryForm from "$lib/components/InquiryForm.svelte";
 	import LocationMap from "$lib/components/LocationMap.svelte";
 	import ProgramsHeading from "$lib/components/ProgramsHeading.svelte";
 	import LocationsHeading from "$lib/components/LocationsHeading.svelte";
+	import Create from "$lib/components/Create.svelte";
+	import Junior from "$lib/components/Junior.svelte";
+	import Camps from "$lib/components/Camps.svelte";
+	import OtherPrograms from "$lib/components/OtherPrograms.svelte";
 	export let data;
 </script>
 
 <Hero></Hero>
 <About></About>
 <ProgramsHeading></ProgramsHeading>
-<ProgramsCarousel></ProgramsCarousel>
+<Create></Create>
+<Junior></Junior>
+<Camps></Camps>
+<OtherPrograms></OtherPrograms>
 <LocationsHeading></LocationsHeading>
 <LocationMap></LocationMap>
 <InquiryForm {data}></InquiryForm>

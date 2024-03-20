@@ -1,9 +1,6 @@
-<script lang="ts">
-</script>
-
 <section id="about">
     <p>OUR MISSION</p>
-    <div class="subheading">
+    <div class="subheading hidden">
         <h3>WE MAKE</h3>
         <h3>CODING FUN</h3>
     </div>
@@ -35,6 +32,8 @@
             </div>
         </a>
     </span>
+    <b>Don't just take our word for it, hear from some of our parents now!</b>
+    <iframe src="https://www.youtube.com/embed/L3bgHOuykQs" title="Coding for Kids: What is Code Ninjas?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 
 <style lang="scss">
@@ -48,8 +47,8 @@
         width: 100%;
         min-height: fit-content;
         padding: 1em;
-        height: 60vh;
-        border-bottom: solid 2px rgba(0, 0, 0, 0.082);
+        background-image: url('images/gradientbg.png');
+        background-size: 100% 100%;       
 
         p {
             text-wrap: balance;
@@ -97,11 +96,25 @@
             align-items: center;
             padding: 1em 0;
             flex-wrap: wrap;
-            margin: 3em 0 0;
+            margin: 3em 0 1em;
 
             img {
                 height: 2em;
             }
+        }
+
+        b {
+            font-size: 1.2em;
+            margin: 1em;
+        }
+
+        iframe {
+            width: clamp(200px, 100%, 70vw);
+            aspect-ratio: 16/9;
+            height: 100%;
+            pointer-events: all;
+            border-radius: 1em;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.39);
         }
     }
 </style>

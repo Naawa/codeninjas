@@ -14,10 +14,10 @@
 </script>
 
 <section id="contact">
-    <p>REQUEST INFO</p>
+    <p class="hidden">REQUEST INFO</p>
     <div>
-        <h3>EMPOWER</h3>
-        <h3>THEIR FUTURE</h3>
+        <h3 class="hidden">EMPOWER</h3>
+        <h3 class="hidden">THEIR FUTURE</h3>
     </div>
     {#if $message}
         <h4>
@@ -128,7 +128,7 @@
             box-shadow: 0 8px 24px #0067be40;
             border-radius: 0.5em;
             z-index: 1;
-
+            
             span {
                 width: 100%;
                 display: flex;

@@ -13,7 +13,7 @@
     <iframe src="https://www.youtube.com/embed/uzZstlbtTD4?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&enablejsapi=1&playlist=uzZstlbtTD4" frameborder="0" title="West Coquitlam Center">
     </iframe>
     {#if animate}
-    <img src="/images/logo.png" alt="Logo.">
+    <img transition:fly={{ y: 50, duration: 600}} src="/images/logo.png" alt="Logo.">
     <span>
         <div>
             <h1 transition:fly={{ y: 50, duration: 600}}>Kids Learn Code</h1>
