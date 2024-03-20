@@ -59,7 +59,7 @@
             justify-content: center;
             gap: 3em;
 
-            div, button {
+            div {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5em;
@@ -72,14 +72,7 @@
             }
 
             button {
-                min-width: fit-content;
-                padding: 0.5em 2em;
-                color: white;
-                background-color: hsl(165, 67%, 58%);
-
-                &:hover {
-                    background-color: hsl(165, 49%, 39%);
-                }
+                z-index: 1;
             }
         }
     }

@@ -78,7 +78,7 @@
             <input type="text" style="display: none;" name="utmSource" bind:value={$form.utmSource}>
             <input type="text" style="display: none;" name="utmMedium" bind:value={$form.utmMedium}>
             <input type="text" style="display: none;" name="utmCampaign" bind:value={$form.utmCampaign}>
-            <button>SUBMIT</button>
+            <button>Submit</button>
         </form>
     {/if} 
 </section>
@@ -90,7 +90,7 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
         width: 100%;
         height: 100vh;
 
@@ -122,8 +122,7 @@
             flex-direction: column;
             gap: 1em;
             min-width: fit-content;
-            width: 35vw;
-            max-width: 90dvw;
+            width: 30vw;
             background-color: white;
             box-shadow: 0 8px 24px #0067be40;
             border-radius: 0.5em;
@@ -133,16 +132,6 @@
                 width: 100%;
                 display: flex;
                 gap: 1em;
-            }
-
-            button {
-                background-color: #4cdac2;
-                color: white;
-                box-shadow: 0 0 16px #3ab19d70;
-
-                &:hover {
-                    background-color: #40bda8;
-                }
             }
         }
     }

@@ -93,18 +93,7 @@
         }
 
         button {
-            margin: 1em 0;
-            min-height: 0;
-            height: 3em;
-            min-width: fit-content;
-            width: 12em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #02ce9b;
-            color: white;
-            border-radius: 0.5em;
-            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.164);
+            margin: 2em 0;
         }
     }
 
@@ -144,6 +133,7 @@
             span {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 background-color: #1376bd;
                 padding: 1em 3em;
                 border-radius: 10em;

@@ -31,8 +31,6 @@ export const actions = {
       if (!form.valid) {
         return fail(400, { form });
       }
-
-      console.log(form.data)
     
     const { data, error } = await supabase
     .from('leads')
@@ -52,9 +50,37 @@ export const actions = {
     ])
     .select()
 
-    if(form.data.dojo == "Vancouver South") {
-        console.log("lol")
+    interface Lead {
+        facilitySlug: string,
+        ParentFirstName: string,
+        ParentLastname: string,
+        ChildFirstName: string,
+        ChildLastName: string,
+        Email: string,
+        PhoneNumber: string
     }
+
+    const lead: Lead = {
+        facilitySlug: "cn-vancouver-south-bc-ca",
+        ParentFirstName: "Naous",
+        ParentLastname: "Islam",
+        ChildFirstName: "Jelly",
+        ChildLastName: "Bean",
+        Email: "naous.islam@outlook.com",
+        PhoneNumber: "16046008339",
+    }
+
+    /**
+     * const leadReq = await fetch("https://services.codeninjas.com/api/v1/leads", {
+        headers: {
+            "content-type": "application/json; charset=UTF-8",
+        },
+        method: 'POST',
+        body: JSON.stringify(lead),
+    })
+    console.log(await leadReq.status);
+    let result = await leadReq.json();
+     */
 
     if(error) {
         return message(form, "You have already made an inquiry, please wait for us to contact you.")
