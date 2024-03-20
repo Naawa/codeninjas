@@ -52,6 +52,10 @@ export const actions = {
     ])
     .select()
 
+    if(form.data.dojo == "Vancouver South") {
+        console.log("lol")
+    }
+
     if(error) {
         return message(form, "You have already made an inquiry, please wait for us to contact you.")
     }

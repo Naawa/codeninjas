@@ -33,7 +33,7 @@
         </a>
     </span>
     <b>Don't just take our word for it, hear from some of our parents now!</b>
-    <iframe src="https://www.youtube.com/embed/L3bgHOuykQs" title="Coding for Kids: What is Code Ninjas?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   <iframe src="https://www.youtube.com/embed/L3bgHOuykQs" title="Coding for Kids: What is Code Ninjas?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 
 <style lang="scss">
@@ -117,6 +117,7 @@
             pointer-events: all;
             border-radius: 1em;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.39);
+            z-index: 4;
         }
     }
 </style>

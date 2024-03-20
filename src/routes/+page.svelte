@@ -19,7 +19,6 @@
 <Create></Create>
 <Junior></Junior>
 <Camps></Camps>
-<OtherPrograms></OtherPrograms>
 <Impact></Impact>
 <LocationsHeading></LocationsHeading>
 <LocationMap></LocationMap>
