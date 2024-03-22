@@ -49,6 +49,10 @@ export const actions = {
                 },
             ])
             .select()
+        
+        if (error) {
+            return message(form, "You have already made an inquiry, please wait for us to contact you.")
+        }
 
         interface Lead {
             facilitySlug: string,
@@ -87,13 +91,10 @@ export const actions = {
             body: JSON.stringify(lead),
         })
 
-        console.log(leadReq.status);
-        let result = await leadReq.json();
-        console.log(result)
-
-        if (error) {
-            return message(form, "You have already made an inquiry, please wait for us to contact you.")
+        if(leadReq.status > 400) {
+            return message(form, "An error occured while processing your request, please contact 6046008339 to report this issue.");
         }
+
         return message(form, "We have received your inquiry. We will contact you shortly.")
     }
 };
