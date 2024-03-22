@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { dojos } from "$lib/utils/dojos";
-	import { reveal } from "svelte-reveal";
-	import SuperDebug, { superForm } from "sveltekit-superforms";
+	import { dojos, locations } from "$lib/utils/dojos";
+	import { superForm } from "sveltekit-superforms";
 
 
     export let data: any;
@@ -25,8 +24,8 @@
         </h4>
     {:else}
         <form method="POST" use:enhance>
-            <select bind:value={$form.dojo} name="dojo" >
-                <option>Select A Location</option>
+            <select bind:value={$form.dojo} name="dojo" {...$constraints.dojo}>
+                <option value="" disabled>Select A Location</option>
                 {#each dojos as dojo}
                     <option>{dojo}</option>
                 {/each}

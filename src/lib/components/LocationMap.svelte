@@ -40,12 +40,6 @@
             z-index: 0;
             transition: z-index 0s 1s, translate 0.5s;
 
-            &:last-of-type {
-                background-image: url('/images/victoriaMarker.png');
-                height: 10%;
-                width: 10%
-            }
-
 
             span {
                 display: flex;
