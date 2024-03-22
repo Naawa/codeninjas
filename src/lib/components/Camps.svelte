@@ -80,7 +80,8 @@
                 position: absolute;
                 min-height: auto;
                 min-width: auto;
-                height: 110%;
+                height: 100%;
+                scale: 1.2;
                 width: auto;
                 top: auto;
                 left: auto;
