@@ -69,11 +69,11 @@ button {
     background-color: #0db88f;
     color: white;
     border: none;
-    padding: 1em 4em;
-    border-radius: 0.5em;
-    font-weight: 700;
-    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
     max-width: fit-content;
+    font-weight: 900;
+    font-size: 1.1em;
 
     &:hover {
         background-color: #07a881;

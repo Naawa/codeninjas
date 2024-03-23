@@ -17,7 +17,7 @@
         <p>
             Is your young Ninja already crazy about technology? Our JR program is designed to help support and nurture a foundation of learning through engaging activities, creativity, and problem-solving – no reading required!
         </p>
-        <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'start', behavior: 'smooth' })}}}>Learn More</button>
+        <button on:click={() => {if(browser) {document?.getElementById('contact')?.scrollIntoView({ block: 'start', behavior: 'smooth' })}}}>LEARN MORE</button>
     </div>
 </section>
 
