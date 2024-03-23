@@ -37,7 +37,7 @@
         overflow: hidden;
         
         iframe {
-            opacity: 0.8;
+            opacity: 0.7;
             position: absolute;
             aspect-ratio: 16/9;
             min-height: 100vh;
