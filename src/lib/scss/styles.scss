@@ -41,6 +41,8 @@ html {
         width: clamp(250px, 100%, 100dvw);
         justify-content: center;
         align-items: center;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0, 85, 255, 0.041) 100%);
         
         h1 { font-size: 3.366rem; }
         h2 { font-size: 2.525rem; }
@@ -69,7 +71,7 @@ button {
     background-color: #0db88f;
     color: white;
     border: none;
-    padding: 0.7em 1.2em 0.5em;
+    padding: 0.5em 1em 0.25em;
     border-radius: 0.25em;
     max-width: fit-content;
     font-weight: 900;
